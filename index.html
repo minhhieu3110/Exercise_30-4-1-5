@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài Tập 30/4-1/5</title>
+    <script src="main.js"></script>
+</head>
+<body>
+<div>
+    <p>1. Cách khai báo biến: Để khai báo 1 biến dùng các từ khóa như let, var, const + tên biến</p>
+    <p>2. Có mấy kiểu dữ liệu: có 3 kiểu dữ liệu chính là: string, number, boolean</p>
+    <p>3. Làm sao để quy định kiểu dữ liệu cho 1 biến: Khai báo kiểu dữ liệu cụ thể khi khai báo biến. Nhưng trong Javascript thì
+        không thể khai báo kiểu dữ liệu khi khai báo biến mà kiểu dữ liệu được thể hiện tại thời điểm nhập vào và chạy dữ vào giá trị của biến</p>
+    <p>4. Có những các nào để hiện thị chữ hello ra: dùng alert, console.log, DOM(document.write, document.getElementById...)</p>
+    <p>5. Có những cách nào để nhập vào biến a: dùng prompt, input</p>
+    <p>6. In ra thẻ h1, img, a với JS: dùng "cặp thẻ đóng mở h1", "cặp thẻ đóng mở a","thẻ img"</p>
+    <p>7. Nhập vào tên và in ra tên</p>
+    <input type="text" placeholder="Nhập tên" id="name">
+    <button onclick="ten()">In tên</button>
+    <p id="ten"></p>
+    <p>8. Nhập vào a in ra bình phương của a</p>
+    <input type="number" placeholder="Nhập a" id="a">
+    <button onclick="binhphuong()">Bình Phương</button>
+    <p id="kq"></p>
+    <p>9. Nhập vào tên và in ra tên với h1</p>
+    <input type="text" placeholder="Nhập tên" id="nameh1">
+    <button onclick="tenh1()">In tên</button>
+    <p id="tenh1"></p></div>
+    <p>10. Nhập vào đường dẫn cho biến src, in ra ảnh với nguồn ảnh là biến src</p>
+    <input type="text" placeholder="Nhập SRC" id="src">
+    <button onclick="picture()">In ảnh</button>
+    <p id="srcpic"></p>
+    <div id="image"></div>
+    <p>11. Nhập vào tuổi trong biến age, in ra 'Đủ tuổi' nếu age>18</p>
+    <input type="number" placeholder="Nhập tuổi" id="age">
+    <button onclick="check()">Kiểm tra</button>
+    <p id="kqua"></p>
+    <p>12. Nhập và a, in ra 'Hello' nếu a chẵn, 'Hi' nếu a lẻ</p>
+<input type="number" placeholder="Nhập a" id="soa">
+<button onclick="kt()">Kiểm tra</button>
+<p id="numa"></p>
+<p>13. Nhập vào a, b. Nếu a>b in ra tổng, nếu a nhỏ hơn b in ra tích, nếu a =b in ra 'Hihi'</p>
+<input type="number" placeholder="Nhập a" id="numbera">
+<input type="number" placeholder="Nhập b" id="numberb">
+<button onclick="checkab()">Kiểm tra</button>
+<p id="result"></p>
+<p>14. Nhập a,b,c. In ra số lớn nhất</p>
+<input type="number" placeholder="Nhập a" id="number_a">
+<input type="number" placeholder="Nhập b" id="number_b">
+<input type="number" placeholder="Nhập c" id="number_c">
+<button onclick="ktra()">Kiểm tra</button>
+<p id="ketq"></p>
+<p>15. In ra 100 chữ Hello</p>
+<button onclick="inhello()">In</button>
+<p>16. Nhập vào N từ prompt. In ra N lần chữ 'Hello'</p>
+<button onclick="in_n_hello()">In</button>
+<p>17. In ra các số từ 1 đến 1000</p>
+<button onclick="print1_1000()">In</button>
+<p>18. In ra các số từ a đến b</p>
+<input type="number" placeholder="Nhập a" id="so_a">
+<input type="number" placeholder="Nhập b" id="so_b">
+<button onclick="printa_b()">In</button>
+<p>19. In ra các số từ a đến b mỗi số trong thẻ h1</p>
+<input type="number" placeholder="Nhập a" id="so-a">
+<input type="number" placeholder="Nhập b" id="so-b">
+<button onclick="printa_bh1()">In</button>
+<p>20. In ra các số chẵn từ a đến b </p>
+<input type="number" placeholder="Nhập a" id="number-a">
+<input type="number" placeholder="Nhập b" id="number-b">
+<button onclick="printeven()">In</button>
+<p>21. In ra các số từ a đến b số chẵn trong h2, so le trong h1</p>
+<input type="number" placeholder="Nhập a" id="numb-a">
+<input type="number" placeholder="Nhập b" id="numb-b">
+<button onclick="print1()">In</button>
+<p>22. Tính tích, Tính Tổng các số chia 5 dư 2 từ a đến b.</p>
+<input type="number" placeholder="Nhập a" id="num-a">
+<input type="number" placeholder="Nhập b" id="num-b">
+<button onclick="calc()">In</button>
+<p id="tong"></p>
+<p id="tich">   </p>
+</div>
+</body>
+</html>
