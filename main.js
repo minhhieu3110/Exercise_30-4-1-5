@@ -138,3 +138,137 @@ function calc(){
    document.getElementById('tong').innerHTML = "Tổng các số chia 5 dư 2 từ a đến b là: "+tong
    document.getElementById('tich').innerHTML =  "Tích các số chia 5 dư 2 từ a đến b là: "+tich
 }
+function count(){
+    let a = parseFloat(document.getElementById("num_a").value);
+    let b = parseFloat(document.getElementById("num_b").value);
+    let count = 0
+    for (let i = a; i <= b ; i++) {
+        if(i % 5 === 2){
+            count+=1
+        }
+        document.getElementById('resultcount').innerHTML = "Số lượng các số chia 5 dư 2 từ "+a+" đến "+b+" là: "+count
+    }
+}
+
+
+//Mảng
+let arr = []
+
+function create_array(){
+    let n = document.getElementById("n").value;
+    for (let i = 0; i < n; i++) {
+        let pt = +prompt("Nhập phần tử thứ "+i)
+            arr.push(pt)
+        console.log(arr[i])
+    }
+    document.getElementById('array').innerHTML = "Mảng vừa tạo là: ["+arr+"]"
+}
+function even(){
+    let chan = ''
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 == 0){
+            chan += arr[i]+", "
+            //console.log(chan)
+            //document.getElementById('even').innerHTML = "Các phần tử chẵn trong mảng trên là: ["+chan+"]"
+
+        }
+    }
+    document.getElementById('even').innerHTML = "Các phần tử chẵn trong mảng trên là: ["+chan+"]"
+}
+function even_odd(){
+    let chan = ''
+    let le =""
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 == 0){
+            chan += arr[i]+", "
+            //console.log(chan)
+            //document.getElementById('even').innerHTML = "Các phần tử chẵn trong mảng trên là: ["+chan+"]"
+
+        }else {
+            le += arr[i]+", "
+        }
+    }
+    document.getElementById('chan').innerHTML = "Các phần tử chẵn trong mảng trên là: <h2>["+chan+"]</h2>"
+    document.getElementById('le').innerHTML = "Các phần tử lẻ trong mảng trên là: <h1>["+le+"]</h1>"
+
+}
+function Tong_tich(){
+    let tong = 0
+    let tich = 1
+    for (let i = 0; i < arr.length; i++) {
+        tong += arr[i];
+        tich *= arr[i]
+    }
+    document.getElementById('tichpt').innerHTML = "Tích các phần tử trong mảng trên là: "+tich
+    document.getElementById('tongpt').innerHTML = "Tổng các phần tử trong mảng trên là: "+tong
+}
+function Tong_tich_even(){
+    let tong = 0
+    let tich = 1
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] % 2 == 0){
+            tong += arr[i];
+            tich *= arr[i]
+        }
+    }
+    document.getElementById('tichpteven').innerHTML = "Tích các phần tử chẵn trong mảng trên là: "+tich
+    document.getElementById('tongpteven').innerHTML = "Tổng các phần tử chẵn trong mảng trên là: "+tong
+}
+function findMax(){
+    let max = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (max < arr[i]) {
+            max = arr[i]
+        }
+    }
+    document.getElementById('max').innerHTML = "Giá trị lớn nhất trong mảng trên là: "+max
+}
+function findMaxeven(){
+    let maxchan = arr[0]
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 2 == 0){
+            if (maxchan < arr[i]) {
+                maxchan = arr[i]
+               // console.log(maxchan)
+            }
+        }
+    }
+    document.getElementById('maxeven').innerHTML = "Giá trị lớn nhất của các phần tử chẵn trong mảng trên là: "+maxchan
+}
+function count5(){
+    let count = 0
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] % 5 === 2){
+            count+=1
+        }
+    }
+    document.getElementById('kqcount').innerHTML = "Số lượng các phần tử chia 5 dư 2 trong mảng trên là: "+count
+}
+function counta(){
+    let count = 0
+    let a = parseFloat(document.getElementById("pt_a").value);
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] === a){
+            count+=1
+        }
+    }
+    document.getElementById('counta').innerHTML = "Số lượng các phần tử "+a+" trong mảng trên là: "+count
+}
+function vta(){
+    let vta = parseFloat(document.getElementById("vt_a").value);
+    let vitri = []
+    let kq =""
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] === vta){
+            console.log(i)
+            vitri.push(i)
+            kq= "Vị trí của "+vta+" trong mảng trên là: "+vitri
+        }else {
+            kq= "Vị trí của "+vta+" không tồn tại trong mảng!!!"
+
+        }
+
+    }
+    //return vitri
+    document.getElementById('vt-a').innerHTML = kq
+}
